@@ -1,0 +1,24 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.radioaudi.launcher'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.radioaudi.launcher'
+        minSdk 21
+        targetSdk 27
+        versionCode 5
+        versionName '1.4'
+    }
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
